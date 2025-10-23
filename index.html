@@ -12,10 +12,10 @@
       text-align: center;
       margin-top: 50px;
     }
-    .excelente {
+    .excelente,.aprobado {
       color: green;
     }
-    .aprobado, .recuperacion {
+    .recuperacion {
       color: orange;
     }
     .reprobado, .invalido {
@@ -34,7 +34,7 @@
         document.writeln ("El promedio del estudiante "+nombre+ " registrado con el usuario "+usuario+ " es: "+promedio);
         
         if (promedio>=4.0 && promedio<=5.0){
-            document.writeln("<p class='excelente'>Excelente, has aprobado con honores</p>");
+            document.writeln("<p class ='excelente'>Excelente, has aprobado con honores</p>");
         }
         else if (promedio>=3.0 && promedio<=3.9){
             document.writeln("<p class='aprobado'>Está bien, has aprobado</p>");
