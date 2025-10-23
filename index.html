@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluador de Notas</title>
+</head>
+<body>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .excelente {
+      color: green;
+    }
+    .aprobado, .recuperacion {
+      color: orange;
+    }
+    .reprobado, .invalido {
+      color: red;
+    }
+  </style>
+    <h1> Evaluador De Promedio De Notas</h1>
+    <script>
+        let usuario = parseInt (prompt("holaa, ingresa tu usuario  "));
+        let nombre = (prompt("¿cual es tu nombree?"));
+        let num1= parseInt (prompt("Digite la nota 1:"));
+        let num2 = parseInt (prompt ("digite la nota 2:"));
+        let num3 = parseInt(prompt ("digite la nota 3:"));
+        let sum= num1+num2+num3
+        let promedio= sum/3
+        document.writeln ("El promedio del estudiante "+nombre+ " registrado con el usuario "+usuario+ " es: "+promedio);
+        
+        if (promedio>=4.0 && promedio<=5.0){
+            document.writeln("<p class='excelente'>Excelente, has aprobado con honores</p>");
+        }
+        else if (promedio>=3.0 && promedio<=3.9){
+            document.writeln("<p class='aprobado'>Está bien, has aprobado</p>");
+        }
+        else if (promedio>=2.9 && promedio<=2.0){
+            document.writeln("<p class='recuperacion'>Debes presentar una recuperación</p>");
+        }
+        else if (promedio<2.0){
+            document.writeln("<p class='reprobado'>Has reprobado</p>");
+        }
+        else{
+            document.writeln("<p class='invalido'>La nota no es válida</p>");
+        }
+
+    </script>
+</body>
+</html>
